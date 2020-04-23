@@ -1,0 +1,25 @@
+-	file - hosts: 
+		127.0.0.1 qln.test
+-	file httpd-vhosts.conf
+	+ file php thuan
+		<VirtualHost *:80>
+		DocumentRoot "D:\warehouse "
+		ServerName warehouse.test
+		<Directory "D:\warehouse ">
+		Options FollowSymLinks
+		AllowOverride All
+		DirectoryIndex index.php
+		Require all granted
+		</Directory>
+		</VirtualHost>
+	+ file php framework
+		<VirtualHost *:80>
+		DocumentRoot "D:\shop\project\public "
+		ServerName shop.test
+		<Directory "D:\shop\project\public ">
+		Options FollowSymLinks
+		AllowOverride All
+		DirectoryIndex index.php
+		Require all granted
+		</Directory>
+		</VirtualHost>
