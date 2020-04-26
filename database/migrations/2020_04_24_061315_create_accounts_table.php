@@ -20,7 +20,7 @@ class CreateAccountsTable extends Migration
             $table->string('email',255)->nullable();
             $table->string('full_name',255)->nullable();
             $table->integer('role_id')->nullable();
-            $table->tinyInteger('del_flg')->dafault(0);
+            $table->tinyInteger('del_flg')->nulable()->dafault(0);
             $table->string('department',255)->nullable();
             $table->timestamps();
         });

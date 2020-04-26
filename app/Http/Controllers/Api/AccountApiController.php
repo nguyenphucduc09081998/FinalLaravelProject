@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Services\AccountService;
+use App\Http\Requests\Accounts\CreateAccountRequest;
+use App\Http\Requests\Accounts\UpdateAccountRequest;
 
 
 class AccountApiController extends Controller
@@ -21,8 +23,6 @@ class AccountApiController extends Controller
         $this->service = $accountservice; 
     }
 
-
-
     public function index()
     {
         //
@@ -33,10 +33,17 @@ class AccountApiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(CreateAccountRequest $request)
     {
         //
-        
+        $result =  $this->service->create($request);
+    
+    //     return response()->json($result);
+        if($result){
+            return redirect()->route('login');
+        }else{
+                return "register fail";
+        }
     }
 
     /**

@@ -8,14 +8,14 @@ class Account extends Model
 {
     //
 
-    const CREATED_AT = 'creation_date';
-    const UPDATED_AT = 'last_update';
+    // const CREATED_AT = 'creation_date';
+    // const UPDATED_AT = 'last_update';
     
     protected $table = 'accounts';
 
     protected $primaryKey ='id';
 
-    protected $incrementing = false;
+    // protected $incrementing = false;
 
     protected $keyType = 'integer';
 

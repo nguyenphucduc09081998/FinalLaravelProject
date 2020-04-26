@@ -3,14 +3,19 @@ namespace App\Http\Services;
 
 use App\Entities\Account;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AccountService {
 
     public function create($request){
-        $date = $request->all();
+        $data = $request->all();
+        $data['password'] = Hash::make($data['password']);
+
         $account = Account::create($data);
-        dd($account);
+
+       // dd($account);
         return response()->json($account);
+       
     }
 
 

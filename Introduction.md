@@ -16,6 +16,9 @@
  <!-- tao function index,create,deleet -->
 * php artisan make:controller Auth/LoginController --resource 
 
+## Leng Request 
+* php artisan make:request classname -> 
+php artisan make:request CreateTestRequest (se tu tao ra folder Request trong http luono)
 
 
 

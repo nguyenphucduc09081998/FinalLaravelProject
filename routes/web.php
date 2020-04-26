@@ -20,7 +20,7 @@ Route::get('/', function () {
  
 //  auth  
 
-Route::get('/login', 'Auth\LoginController@index');
+Route::get('/login', 'Auth\LoginController@index')->name('login');
 Route::get('/register', 'Auth\RegisterController@index');
 
 // account
