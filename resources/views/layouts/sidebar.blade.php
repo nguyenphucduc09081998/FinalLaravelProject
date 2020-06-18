@@ -1,32 +1,33 @@
 <aside class="main-sidebar elevation-4 sidebar-light-primary">
     <!-- Brand Logo -->
-    <a href="{{url('/dashboard')}}" class="brand-link bg-primary ">
-        <img src="{{asset('img/splus-logo-2.png')}}" alt="SPLUS Logo" class="brand-image img-circle elevation-3" style="opacity: 1">
-        <span class="brand-text font-weight-light effect-shine"><b>DUC NGUYEN</b></span>
+    <a href="" class="brand-link bg-primary ">
+        <img src="{{URL::asset('img/avery-logo.png')}}" alt="AVERY Logo" class="brand-image img-circle elevation-3" style="opacity: 1">
+        <span class="brand-text font-weight-light effect-shine"><b>Avery Dennison</b></span>
     </a>
 
-    @guest
-    <a class="nav-link" href="">{{ __('Login') }}</a>
-    @else
+    <!-- @guest -->
+    <a class="nav-link" href="{{url('/login')}}">{{ __('Login') }}</a>
+    <!-- @else -->
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{asset('img/avatar8.png')}}" class="img-circle elevation-2" alt="User Image">
+                <img src="{{URL::asset('img/avatar8.png')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
 
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <a href="#" class="d-block">sfsdfds</a>
 
             </div>
         </div>
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" 
+                data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{url('dashboard')}}" class="nav-link {{Request::is('dashboard*') ? 'active' : '' }} effect-underline">
+                    <a href="" class="nav-link effect-underline">
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
@@ -34,8 +35,8 @@
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview {{Request::is('*effort*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{Request::is('*effort*') ? 'active' : '' }}">
+                <li class="nav-item has-treeview ">
+                    <a href="#" class="nav-link ">
                         <i class="nav-icon fa fa-line-chart"></i>
                         <p>
                             Effort
@@ -79,8 +80,8 @@
                         </p>
                     </a>
                 </li> -->
-                <li class="nav-item has-treeview {{Request::is('*cost*') ? 'menu-open' : '' }}">
-                    <a href="#" class="nav-link {{Request::is('*cost*') ? 'active' : '' }}">
+                <li class="nav-item has-treeview ">
+                    <a href="#" class="nav-link ">
                         <i class="nav-icon fa fa-pie-chart"></i>
                         <p>
                             Cost
@@ -89,25 +90,25 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{url('listcost')}}" class="nav-link {{Request::is('listcost') ? 'active' : '' }} effect-underline ">
+                            <a href="" class="nav-link  effect-underline ">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>List Cost</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('addcost')}}" class="nav-link {{Request::is('addcost*') ? 'active' : '' }} effect-underline">
+                            <a href="" class="nav-link  effect-underline">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Create Cost</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('approvecost')}}" class="nav-link {{Request::is('approvecost*') ? 'active' : '' }} effect-underline">
+                            <a href="" class="nav-link effect-underline">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Approve Cost</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('editcost')}}" class="nav-link {{Request::is('editcost*') ? 'active' : '' }} effect-underline">
+                            <a href="" class="nav-link  effect-underline">
                                 <i class="fa fa-circle-o nav-icon"></i>
                                 <p>Edit Cost</p>
                             </a>
@@ -253,8 +254,10 @@
                 <li><a href="#">&nbsp;</a></li>
             </ul>
         </nav>
+
+
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
-    @endguest
+    <!-- @endguest -->
 </aside>

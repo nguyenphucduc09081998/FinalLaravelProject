@@ -22,3 +22,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('create', 'Api\AccountApiController@create')->name('api.account.create');
 
+
+Route::post('/login', 'Auth\LoginController@login')->name('api.auth.login');
+
+
+

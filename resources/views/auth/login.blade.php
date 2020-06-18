@@ -14,7 +14,7 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#007bff">
     
-    <link rel="icon" href="{{asset('img/ducfavicon.ico')}}" sizes="16x16">
+    <!-- <link rel="icon" href="{{asset('img/ducfavicon.ico')}}" sizes="16x16"> -->
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{asset('lib/font-awesome/css/fontawesome.min.css')}}">
@@ -69,7 +69,7 @@
 
             <div class="card-body login-card-body">
 
-                <form method="POST" action="">
+                <form method="POST" action="{{ route('api.auth.login') }}">
                     @csrf
                     <!-- Email -->
                     <div class="row">

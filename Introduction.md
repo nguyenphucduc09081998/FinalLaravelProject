@@ -16,6 +16,14 @@
  <!-- tao function index,create,deleet -->
 * php artisan make:controller Auth/LoginController --resource 
 
+# Lenh Migrate
+* php artisan make:migration create_users_table
+* php artisan migrate:reset     -> clear all table in db
+* php artisan migrate           -> run all table
+# Lenh Seeder 
+* php artisan make:seeder UserSeeder
+
+
 ## Leng Request 
 * php artisan make:request classname -> 
 php artisan make:request CreateTestRequest (se tu tao ra folder Request trong http luono)

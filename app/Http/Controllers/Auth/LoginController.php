@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Auth;
+use App\Model\Users;
 
 class LoginController extends Controller
 {
@@ -17,7 +17,20 @@ class LoginController extends Controller
     // public function __construct(){
     //     $this->middleware('auth');
     // }
+    public function login(Request $request){
+        $arr = [
+            'email' => $request->email, 
+            'password' => $request->password
+        ];
 
+        if (Auth::attempt($arr) ){
+            // The user is being remembered...
+            dd('OK');
+        }else{
+            dd('fail');
+
+        }
+    }    
 
     public function index()
     {
